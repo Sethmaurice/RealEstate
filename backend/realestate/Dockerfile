@@ -3,7 +3,7 @@
 # Use the official OpenJDK 17 base image with Alpine Linux
 FROM maven:3.8.3-openjdk-17 as build
 # Copy the JAR file from the target directory to the container at /app
-COPY . .
+COPY ../.. .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
