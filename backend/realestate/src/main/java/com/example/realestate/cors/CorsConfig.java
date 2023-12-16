@@ -23,6 +23,7 @@ public class CorsConfig {
 
         // Allow specific origins
         config.addAllowedOrigin("http://localhost:3000"); // Update with your frontend URL
+        config.addAllowedOrigin("https://realestate-qfhq.onrender.com");
 
         // Allow specific methods
         config.addAllowedMethod("GET");
