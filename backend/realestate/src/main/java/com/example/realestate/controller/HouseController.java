@@ -41,7 +41,7 @@ public class HouseController {
         List<House> allHouses=houseService.getAllHouse();
         if(allHouses!=null){
             List<House> houseResponses = allHouses.stream().peek(house -> {
-                String imageUrl = "http://localhost:8080/image/" + house.getImagePath(); // Replace with your domain
+                String imageUrl = "http://localhost:5959/image/" + house.getImagePath(); // Replace with your domain
                  // Log the URL to the console
 //                logger.info("Constructed Image URL: {}", imageUrl);
                 house.setImagePath(imageUrl);
@@ -58,7 +58,7 @@ public class HouseController {
     public ResponseEntity<?>oneHouse(@PathVariable("id") Integer id){
         House house=houseService.findHouse(id);
         if(house!=null){
-            String imageUrl = "http://localhost:8080/image/" + house.getImagePath();
+            String imageUrl = "http://localhost:5959/image/" + house.getImagePath();
             house.setImagePath(imageUrl);
             return new ResponseEntity<>(house,HttpStatus.OK);
         }
