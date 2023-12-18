@@ -36,8 +36,8 @@ public class CorsConfig {
 
         // Allow specific origins
         config.addAllowedOrigin("http://localhost:3000"); // Update with your frontend URL
-//        config.addAllowedOrigin("https://realestate-qfhq.onrender.com");
-//        config.addAllowedOrigin("https://realestate-neon-mu.vercel.app");
+        config.addAllowedOrigin("https://realestate-qfhq.onrender.com");
+        config.addAllowedOrigin("https://realestate-neon-mu.vercel.app");
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         config.getAllowCredentials();
