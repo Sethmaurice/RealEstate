@@ -9,6 +9,6 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/realestate-0.0.1-SNAPSHOT.jar app.jar
 # Expose the port that your Spring Boot application will run on
-EXPOSE 8080
+EXPOSE 5959
 # Specify the command to run on container startup
 ENTRYPOINT ["java", "-Xmx512m", "-jar", "/app.jar"]
